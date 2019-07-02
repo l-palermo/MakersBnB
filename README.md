@@ -4,6 +4,7 @@
 
 ## User Stories
 
+```
 As a user,
 So that I can list a new space,
 I want to sign up to MakersBnB.
@@ -51,7 +52,7 @@ I want to approve requests to hire.
 As a user who has a space,
 So that I can control who stays in my space,
 I want to keep my space available to be booked until I confirm a booking request.
-
+```
 
 
 ########################## Team comments #############################
