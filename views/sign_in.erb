@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> Makersbnb </title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- <link rel="stylesheet" type="text/css" href="css/style.css">. -->
+    </head>
+      <h1 align='center'> Makers BnB </h1>
+    <body>
+      <form id='form' action="/makersbnb" method='get'>
+        <input id='name' type='text' placeholder='Name' />
+        <!-- <input id='email' type='text' placeholder='Email' /> -->
+        <!-- <input id='password' type='text' placeholder='Password' />     -->
+        <button type='submit' value='submit'> Submit
+      </form>
+      <%# <script src='./name.php'> </script>  %>
+      <script>
+      $( document ).ready(function(){
+        $('#form').on('submit', (function(e) {
+          e.preventDefault();
+          // $.ajax({
+          //   url: 'name.php',
+          //   type: 'Post',
+          //   data: {name: name}
+          // })
+          
+          var name = $('#name').val();
+          $.post('name.php', {name: name});
+        }))
+      })
+      </script>
+
+    </body>
+</html>
