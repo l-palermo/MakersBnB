@@ -5,7 +5,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <!-- <link rel="stylesheet" type="text/css" href="css/style.css">. -->
     </head>
-      <h1 align='center'> Makers BnB </h1>
+      <h1 id='title' align='center'> Makers BnB </h1>
     <body>
       <form id='form' action="/makersbnb" method='get'>
         <input id='name' type='text' placeholder='Name' />
@@ -16,17 +16,23 @@
       <%# <script src='./name.php'> </script>  %>
       <script>
       $( document ).ready(function(){
-        $('#form').on('submit', (function(e) {
-          e.preventDefault();
+        $('#title').text('Text');
+
+        // $('#form').on('submit', (function(e) {
+          // e.preventDefault();
           // $.ajax({
           //   url: 'name.php',
+          //   dataType: 'jsonp',
           //   type: 'Post',
-          //   data: {name: name}
+          //   data: new FormData(this),
+          //   contentType: false,
+          //   cache: false,
+          //   processData:false
           // })
           
-          var name = $('#name').val();
-          $.post('name.php', {name: name});
-        }))
+          // var name = $('#name').val();
+          // $.post('name.php', {name: name});
+        // }))
       })
       </script>
 
