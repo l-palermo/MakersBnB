@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> Makersbnb </title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- <link rel="stylesheet" type="text/css" href="css/style.css">. -->
+    </head>
+      <h1 id='title' align='center'> Makers BnB </h1>
+    <body>
+      <form action="/get_data" method='post'>
+        <input type='text' name='name' placeholder='Name' />
+        <input type='text' name='email' placeholder='Email' />
+        <input type='text' name='password' placeholder='Password' />    
+        <button type='submit' value='submit'> Submit
+      </form>
+      <!-- <script>
+      $( document ).ready(function(){
+        $('#title').text('Text');
+
+        $('#form').on('submit', (function(e) {
+          e.preventDefault();
+          $.ajax({
+            url: 'name.php',
+            dataType: 'jsonp',
+            type: 'Post',
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData:false
+          })
+          
+          var name = $('#name').val();
+          $.post('name.php', {name: name});
+        }))
+      })
+      </script> -->
+
+    </body>
+</html>
