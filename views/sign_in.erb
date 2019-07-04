@@ -7,34 +7,33 @@
     </head>
       <h1 id='title' align='center'> Makers BnB </h1>
     <body>
-      <form id='form' action="/makersbnb" method='get'>
-        <input id='name' type='text' placeholder='Name' />
-        <!-- <input id='email' type='text' placeholder='Email' /> -->
-        <!-- <input id='password' type='text' placeholder='Password' />     -->
+      <form action="/get_data" method='post'>
+        <input type='text' name='name' placeholder='Name' />
+        <input type='text' name='email' placeholder='Email' />
+        <input type='text' name='password' placeholder='Password' />    
         <button type='submit' value='submit'> Submit
       </form>
-      <%# <script src='./name.php'> </script>  %>
-      <script>
+      <!-- <script>
       $( document ).ready(function(){
         $('#title').text('Text');
 
-        // $('#form').on('submit', (function(e) {
-          // e.preventDefault();
-          // $.ajax({
-          //   url: 'name.php',
-          //   dataType: 'jsonp',
-          //   type: 'Post',
-          //   data: new FormData(this),
-          //   contentType: false,
-          //   cache: false,
-          //   processData:false
-          // })
+        $('#form').on('submit', (function(e) {
+          e.preventDefault();
+          $.ajax({
+            url: 'name.php',
+            dataType: 'jsonp',
+            type: 'Post',
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData:false
+          })
           
-          // var name = $('#name').val();
-          // $.post('name.php', {name: name});
-        // }))
+          var name = $('#name').val();
+          $.post('name.php', {name: name});
+        }))
       })
-      </script>
+      </script> -->
 
     </body>
 </html>
