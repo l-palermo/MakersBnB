@@ -67,9 +67,7 @@ However, we decided to change this design as we recognised a couple of gaps in o
 
 As it would have taken a lot of research to fill these knowledge holes, we chose to use Ruby for our controller, using Sinatra as we had done in previous challenges.
 
-* We have a basic set up in the main folder.
-* Thinking twice, we do not need datamapper but mysql because our logic will be in JS. :)
-
+After two days of working with this new model, we ran into issues using our chosen ORM in JavaScript and decided to revert to using Ruby in the backend. We are now using DataMapper instead of TypeORM.
 
 ### Members
 
