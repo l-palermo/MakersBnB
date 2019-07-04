@@ -1,5 +1,5 @@
 require 'data_mapper'
-# require './lib/models/message.rb'
+require './lib/models/space.rb'
 require './lib/models/user.rb'
 
 if ENV['ENVIRONMENT'] == 'test'

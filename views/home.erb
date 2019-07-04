@@ -10,5 +10,14 @@
 
       <h3 align='center'> Welcome <%= @user.name %> </h3>
 
+      <% @spaces.reverse_each do |space| %>
+      <h3> * <%= space.name %> </h3>
+      <h6> Description: <%= space.description %>
+      <h5> Price: <%= space.price %>
+      <form >
+      <% end %>
+
+
+
     </body>
 </html>

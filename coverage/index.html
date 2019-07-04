@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-07-04T11:26:42+01:00">2019-07-04T11:26:42+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-07-04T15:32:35+01:00">2019-07-04T15:32:35+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>29</b> relevant lines. 
-    <span class="green"><b>29</b> lines covered</span> and
+    <b>18</b> relevant lines. 
+    <span class="green"><b>18</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,19 +51,19 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#9aeb0dc688002b6d0637c1222e556c3633c48ae3" class="src_link" title="spec/backend/features/sign_up_spec.rb">spec/backend/features/sign_up_spec.rb</a></td>
+        <td class="strong"><a href="#f3020ba4e4a2451ce328e48fa2a245102104d94d" class="src_link" title="lib/models/space.rb">lib/models/space.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>29</td>
-        <td>20</td>
-        <td>20</td>
+        <td>16</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#3d42f7cf6772a7b9680eeeba437fd40cc740935e" class="src_link" title="spec/backend/user_spec.rb">spec/backend/user_spec.rb</a></td>
+        <td class="strong"><a href="#8d053cf38e799d14bc841b45d404ba3019c44342" class="src_link" title="spec/backend/space_spec.rb">spec/backend/space_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
+        <td>15</td>
         <td>9</td>
         <td>9</td>
         <td>0</td>
@@ -86,13 +86,13 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="9aeb0dc688002b6d0637c1222e556c3633c48ae3">
+        <div class="source_table" id="f3020ba4e4a2451ce328e48fa2a245102104d94d">
   <div class="header">
-    <h3>spec/backend/features/sign_up_spec.rb</h3>
+    <h3>lib/models/space.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -100,178 +100,100 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">require &#39;./app.rb&#39;</code>
+          
+          <code class="ruby"># require &#39;data_mapper&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./database_connection_setup.rb&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">RSpec.feature &#39;Sign up&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">class Space</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &#39;it displays sign up button&#39; do</code>
+          <code class="ruby">  include DataMapper::Resource</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">    visit &#39;/&#39;</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_text(&#39;Makers BnB&#39;)</code>
+          <code class="ruby">    property :id,           Serial</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    property :name,         String</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    property :description,  String</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &#39;it goes to a sign up page&#39; do</code>
+          <code class="ruby">    property :price,        Integer</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="11">
           
-          <code class="ruby">    visit &#39;/&#39;</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="12">
           
-          <code class="ruby">    click_button &#39;sign_up&#39;</code>
+          
+          <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">    expect(current_path).to eq(&#39;/sign_up&#39;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_text(&#39;Makers BnB&#39;)</code>
+          <code class="ruby">DataMapper.finalize</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">DataMapper.auto_upgrade!</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  scenario &#39;it record the name and display it in the home page&#39; do </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit &#39;/&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    click_button &#39;sign_up&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(current_path).to eq(&#39;/sign_up&#39;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    fill_in &#39;name&#39;, with: &#39;user&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    fill_in &#39;email&#39;, with: &#39;email&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    fill_in &#39;password&#39;, with: &#39;password&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    click_button &#39;submit&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(current_path).to eq(&#39;/makersbnb&#39;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(page).to have_content(&#39;Makers BnB&#39;, &#39;Welcome user&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">end</code>
+          <code class="ruby">  </code>
         </li>
       
     </ol>
@@ -279,9 +201,9 @@
 </div>
 
       
-        <div class="source_table" id="3d42f7cf6772a7b9680eeeba437fd40cc740935e">
+        <div class="source_table" id="8d053cf38e799d14bc841b45d404ba3019c44342">
   <div class="header">
-    <h3>spec/backend/user_spec.rb</h3>
+    <h3>spec/backend/space_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
@@ -296,7 +218,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">require &#39;./lib/models/user.rb&#39;</code>
+          <code class="ruby">require &#39;./lib/models/space.rb&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -308,7 +230,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">RSpec.describe User do</code>
+          <code class="ruby">RSpec.describe Space do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -326,43 +248,43 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;craete a user&#39; do</code>
+          <code class="ruby">    it &#39;create a request&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">      User.create(name: &#39;name&#39;, email: &#39;nnn@mail.com&#39;, password: &#39;ccffrr&#39;)</code>
+          <code class="ruby">      space = Space.create(name: &#39;space&#39;, description: &#39;my home&#39;, price: 45)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      user = User.all[0]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">      </code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(space).to be_instance_of(Space)</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(user.email).to eq(&#39;nnn@mail.com&#39;)</code>
+          <code class="ruby">      expect(space.name).to eq(&#39;space&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(user.password).to eq(&#39;ccffrr&#39;)</code>
+          <code class="ruby">      expect(space.description).to eq(&#39;my home&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(user.name).to eq(&#39;name&#39;)</code>
+          <code class="ruby">      expect(space.price).to eq(45)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -381,12 +303,6 @@
           
           
           <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby"></code>
         </li>
       
     </ol>

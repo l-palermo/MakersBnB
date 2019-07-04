@@ -14,10 +14,9 @@ class MakersBnB < Sinatra::Base
     erb :sign_up
   end
 
-  post '/get_data' do
+  post '/user_data' do
     user = User.create(name: params[:name], email: params[:email], password: params[:password])
     session[:current_user] = user.id
-    # Place.create(name: params[:place], description: params[:description], price: params[:price], availability: params[:availability])
     redirect '/makersbnb'
   end 
 
@@ -32,6 +31,7 @@ class MakersBnB < Sinatra::Base
 
   get '/makersbnb' do
     @user = User.get(session[:current_user])
+    @spaces = Space.all
     erb :home
   end
 
