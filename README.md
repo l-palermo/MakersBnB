@@ -1,6 +1,6 @@
 # MakersBnB - Teamfour
 
-* We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
+MakersBnb is a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
 ## User Stories
 
@@ -55,8 +55,27 @@ I want to keep my space available to be booked until I confirm a booking request
 ```
 
 
-########################## Team comments #############################
+## Team comments
+
+Our goal at the start of this project was to build this app using as much JavaScript :coffee: and as little Ruby :gem: as possible.
+
+We wanted to use node.js as our controller with our logic/model written in JavaScript and dynamically load webpage elements with an AJAX engine. We would communicate
+
+However, we decided to change this design as we recognised a couple of gaps in our knowledge;
+1. How node would work as a controller.
+2. We didn't know a JavaScript testing framework that would allow us to write feature tests in the same way Capybara does in RSpec.
+
+As it would have taken a lot of research to fill these knowledge holes, we chose to use Ruby for our controller, using Sinatra as we had done in previous challenges.
 
 * We have a basic set up in the main folder.
 * Thinking twice, we do not need datamapper but mysql because our logic will be in JS. :)
-* The jasmine setting up files are still there. Remember to take them out and set up the SpecRunner.html before running any test.
+
+
+### Members
+
+Teamfour is comprised of:
+
+* Luigi Palermo
+* Monika Kaczanowska
+* Leon Linton
+* Rhys Collier
