@@ -59,7 +59,7 @@ I want to keep my space available to be booked until I confirm a booking request
 
 Our goal at the start of this project was to build this app using as much JavaScript :coffee: and as little Ruby :gem: as possible.
 
-We wanted to use node.js as our controller with our logic/model written in JavaScript and dynamically load webpage elements with an AJAX engine. We would communicate
+We wanted to use node.js as our controller with our logic/model written in JavaScript and dynamically load webpage elements with an AJAX engine. We would use TypeORM to communicate with our database.
 
 However, we decided to change this design as we recognised a couple of gaps in our knowledge;
 1. How node would work as a controller.
