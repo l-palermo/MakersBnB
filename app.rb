@@ -10,12 +10,13 @@ class MakersBnB < Sinatra::Base
     erb :index
   end 
 
-  get '/sign_in' do
-    erb :sign_in
+  get '/sign_up' do
+    erb :sign_up
   end
 
   post '/get_data' do
-    User.create(name: params[:name], email: params[:email], password: params[:password])
+    user = User.create(name: params[:name], email: params[:email], password: params[:password])
+    session[:current_user] = user.id
     # Place.create(name: params[:place], description: params[:description], price: params[:price], availability: params[:availability])
     redirect '/makersbnb'
   end 
@@ -29,9 +30,9 @@ class MakersBnB < Sinatra::Base
   #   erb :home
   # end
 
-  get '/makersbnb/:id' do
-    @users = User.all
-    erb :api
+  get '/makersbnb' do
+    @user = User.get(session[:current_user])
+    erb :home
   end
 
   run! if app_file == $0
