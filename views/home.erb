@@ -14,10 +14,17 @@
       <h3> * <%= space.name %> </h3>
       <h6> Description: <%= space.description %>
       <h5> Price: <%= space.price %>
-      <form >
       <% end %>
 
-
+      <script>
+      $(document).ready(function() {
+        $("#list-a-space").click(function () {
+          $.get("new_list_form.html", function(data){
+            $("#list-new-space").html(data);
+          });
+        });
+      });
+    </script>
 
     </body>
 </html>
