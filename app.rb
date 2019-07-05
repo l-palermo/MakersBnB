@@ -16,9 +16,15 @@ class MakersBnB < Sinatra::Base
 
   post '/user_data' do
     user = User.create(name: params[:name], email: params[:email], password: params[:password])
+    # space = Space.create(name: params[:name], description: params[:description], price: params[:price])
     session[:current_user] = user.id
     redirect '/makersbnb'
-  end 
+  end
+
+  post '/space_data' do
+    space = Space.create(name: params[:name], description: params[:description], price: params[:price])
+    redirect '/makersbnb'
+  end
 
   # get '/api' do
   #   @users = User.all
@@ -35,9 +41,6 @@ class MakersBnB < Sinatra::Base
     erb :home
   end
 
-  get '/list-space' do
-    erb :list_space
-  end
 
   run! if app_file == $0
 end

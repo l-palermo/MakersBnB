@@ -10,10 +10,14 @@
 
       <h3 align='center'> Welcome <%= @user.name %> </h3>
 
+    <div id="list-new-space">
+      <button type="button" id="list-a-space" > list a space </button>
+    </div>
+
       <% @spaces.reverse_each do |space| %>
       <h3> * <%= space.name %> </h3>
-      <h6> Description: <%= space.description %>
-      <h5> Price: <%= space.price %>
+      <h6> Description: <%= space.description %> </h6>
+      <h5> Price: <%= space.price %> </h5>
       <% end %>
 
       <script>
