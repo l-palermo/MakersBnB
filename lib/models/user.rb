@@ -9,7 +9,8 @@ class User
   property :email,      String, required: true
   property :password,   String, required: true
 
-  # has n, :messages
+  has n, :spaces
+  
 end
 
 # DataMapper.finalize

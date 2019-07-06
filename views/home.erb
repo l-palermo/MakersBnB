@@ -16,19 +16,26 @@
 
       <% @spaces.reverse_each do |space| %>
       <h3> * <%= space.name %> </h3>
-      <h6> Description: <%= space.description %> </h6>
-      <h5> Price: <%= space.price %> </h5>
+      <h5> Description: <%= space.description %> </h5>
+      <h4> Price: <%= space.price %> </h4>
+      <div id="request-space" >
+        <button type="button" id="request" value='<%=space.id%>'> Request </button>
+      </div>
       <% end %>
 
       <script>
-      $(document).ready(function() {
-        $("#list-a-space").click(function () {
-          $.get("new_list_form.html", function(data){
-            $("#list-new-space").html(data);
+        $(document).ready(function() {
+          $("#list-a-space").click(function () {
+            $.get("new_list_form.html", function(data){
+              $("#list-new-space").html(data);
+            });
+          });
+        
+          $('#request-space').click(function() {
+            id = $('#request').val();
+            $.post('/post_request', {id: id});
           });
         });
-      });
-    </script>
-
+      </script>
     </body>
 </html>

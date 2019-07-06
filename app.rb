@@ -16,13 +16,12 @@ class MakersBnB < Sinatra::Base
 
   post '/user_data' do
     user = User.create(name: params[:name], email: params[:email], password: params[:password])
-    # space = Space.create(name: params[:name], description: params[:description], price: params[:price])
     session[:current_user] = user.id
     redirect '/makersbnb'
   end
 
   post '/space_data' do
-    space = Space.create(name: params[:name], description: params[:description], price: params[:price])
+    space = Space.create(name: params[:name], description: params[:description], price: params[:price], user_id: session[:current_user])
     redirect '/makersbnb'
   end
 
@@ -34,6 +33,11 @@ class MakersBnB < Sinatra::Base
   # get '/makersbnb' do
   #   erb :home
   # end
+
+  post '/post_request' do
+    space = Space.get(params[:id])
+    space.update(received_request: 'requested')
+  end
 
   get '/makersbnb' do
     @user = User.get(session[:current_user])
